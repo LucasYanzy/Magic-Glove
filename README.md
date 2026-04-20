@@ -27,7 +27,7 @@
 
 **Magic Glove** is a wearable gesture controller that transforms a cotton glove into a wireless BLE mouse and keyboard. Built on the Seeed Studio XIAO ESP32-S3 with an MPU-6050 IMU, it supports 3 switchable control modes — from gaming (WASD) to air-mouse gyroscope control — all through intuitive finger-touch gestures.
 
-> 🏆 **Winner of Best Automation & Productivity** at Rutgers IEEE 2026
+> 🏆 **Winner of Best Automation & Productivity** at Rutgers IEEE 2026 Build_a_thon 24h competition
 
 ## 🛠️ Tech Stack
 
@@ -185,7 +185,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 
 **Magic Glove** 是一款可穿戴手势控制器，将普通棉手套改造为无线 BLE 鼠标与键盘。基于 Seeed Studio XIAO ESP32-S3 和 MPU-6050 惯性测量单元，支持 3 种可切换控制模式——从游戏（WASD 方向键）到空中鼠标陀螺仪控制——全部通过直觉式手指触摸手势完成。
 
-> 🏆 **荣获 Rutgers IEEE 2026 最佳自动化与生产力奖（Best Automation & Productivity）**
+> 🏆 **荣获 Rutgers IEEE 2026 建造马拉松 最佳自动化与生产力奖（Best Automation & Productivity）**
 
 ## 🛠️ 技术栈
 
