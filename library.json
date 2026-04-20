@@ -1,17 +1,15 @@
 {
-  "name": "GestureMouseGlove",
+  "name": "Magic Glove",
   "version": "1.0.0",
-  "description": "A wearable Bluetooth mouse glove based on XIAO ESP32-S3",
-  "keywords": "esp32, esp32s3, xiao, ble, hid, mouse, glove, gesture, touch",
-  "repository":
-  {
+  "description": "Award-winning wearable BLE gesture controller — transforms a glove into a wireless mouse & keyboard using ESP32-S3, MPU-6050, and capacitive touch sensing.",
+  "keywords": "esp32, esp32s3, xiao, ble, hid, mouse, keyboard, glove, gesture, touch, imu, mpu6050, wearable",
+  "repository": {
     "type": "git",
-    "url": "https://github.com/your-username/GestureMouseGlove.git"
+    "url": "https://github.com/LucasYanzy/Magic-Glove.git"
   },
-  "authors":
-  {
-    "name": "Developer",
-    "email": "developer@example.com"
+  "authors": {
+    "name": "LucasYanzy",
+    "url": "https://github.com/LucasYanzy"
   },
   "license": "MIT",
   "frameworks": "arduino",

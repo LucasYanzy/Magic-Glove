@@ -1,3 +1,9 @@
+/**
+ * @file USBHIDManager.cpp
+ * @brief Fallback/Debug USB HID manager (Wired mode) | 有线 USB HID 管理器实现（备用/调试）
+ * @author LucasYanzy
+ */
+
 #include "USBHIDManager.h"
 #include "USB.h"
 #include "USBHIDMouse.h"

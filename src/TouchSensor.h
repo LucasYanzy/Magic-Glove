@@ -1,3 +1,9 @@
+/**
+ * @file TouchSensor.h
+ * @brief Capacitive Touch Manager with adaptive baseline | 电容触摸管理器头文件
+ * @author LucasYanzy
+ */
+
 #ifndef TOUCH_SENSOR_H
 #define TOUCH_SENSOR_H
 

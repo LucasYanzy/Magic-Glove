@@ -1,9 +1,15 @@
+/**
+ * @file BLEManager.cpp
+ * @brief Bluetooth Low Energy HID (Keyboard/Mouse) Manager | 蓝牙 HID 管理器实现
+ * @author LucasYanzy
+ */
+
 #include "BLEManager.h"
 #include <BleComboKeyboard.h>
 #include <BleComboMouse.h>
 
-// Custom BLE device name: "Magic MouseX"
-static BleComboKeyboard bleKeyboard("Magic MouseX", "GestureGlove", 100);
+// Custom BLE device name: "Magic Glove" (Updated from Magic MouseX) | 蓝牙设备名称
+static BleComboKeyboard bleKeyboard("Magic Glove", "GestureGlove", 100);
 static BleComboMouse    bleMouse(&bleKeyboard);
 
 BLEManager::BLEManager() {}
