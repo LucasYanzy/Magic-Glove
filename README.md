@@ -16,6 +16,12 @@
 </p>
 
 <p align="center">
+  <a href="https://canva.link/y9bu67ktrjb0xm3">
+    <img src="https://img.shields.io/badge/Canva-View_Presentation-00C4CC?style=for-the-badge&logo=canva&logoColor=white" alt="View Presentation"/>
+  </a>
+</p>
+
+<p align="center">
   <a href="#english">English</a> | <a href="#中文">中文</a>
 </p>
 
