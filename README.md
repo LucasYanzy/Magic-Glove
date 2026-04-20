@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://img.shields.io/badge/🏆_Best_Automation_&_Productivity-Rutgers_IEEE_2026-Build-a-thon-gold?style=for-the-badge" alt="Award Badge"/>
+  <img src="https://img.shields.io/badge/🏆_Best_Automation_&_Productivity-Rutgers_IEEE_2026_Build_a_thon-gold?style=for-the-badge" alt="Award Badge"/>
 </p>
 
 <h1 align="center">🧤 Magic Glove</h1>
@@ -178,7 +178,7 @@ MIT License — see [LICENSE](LICENSE) for details.
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/🏆_最佳自动化与生产力奖-Rutgers_IEEE_2026-Build-a-thon-gold?style=for-the-badge" alt="奖项"/>
+  <img src="https://img.shields.io/badge/🏆_最佳自动化与生产力奖-Rutgers_IEEE_2026_Build_a_thon-gold?style=for-the-badge" alt="奖项"/>
 </p>
 
 ## 📖 概述
