@@ -9,10 +9,18 @@
 </p>
 
 <p align="center">
-  <img src="https://img.shields.io/badge/ESP32--S3-Firmware-blue?style=flat-square&logo=espressif" alt="ESP32-S3"/>
-  <img src="https://img.shields.io/badge/BLE_HID-Mouse_+_Keyboard-blueviolet?style=flat-square&logo=bluetooth" alt="BLE HID"/>
-  <img src="https://img.shields.io/badge/PlatformIO-Build_System-orange?style=flat-square&logo=platformio" alt="PlatformIO"/>
-  <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT License"/>
+  <a href="https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/">
+    <img src="https://img.shields.io/badge/ESP32--S3-Firmware-blue?style=flat-square&logo=espressif" alt="ESP32-S3"/>
+  </a>
+  <a href="https://github.com/h2zero/NimBLE-Arduino">
+    <img src="https://img.shields.io/badge/BLE_HID-Mouse_+_Keyboard-blueviolet?style=flat-square&logo=bluetooth" alt="BLE HID"/>
+  </a>
+  <a href="https://platformio.org/">
+    <img src="https://img.shields.io/badge/PlatformIO-Build_System-orange?style=flat-square&logo=platformio" alt="PlatformIO"/>
+  </a>
+  <a href="LICENSE">
+    <img src="https://img.shields.io/badge/License-MIT-green?style=flat-square" alt="MIT License"/>
+  </a>
 </p>
 
 <p align="center">
@@ -22,30 +30,35 @@
 </p>
 
 <p align="center">
-  <a href="README.md">English</a> | <a href="README_zh.md">中文</a>
+  <b><a href="#-magic-glove-english">English</a> | <a href="#-magic-glove-中文版">中文版</a></b>
 </p>
 
 ---
 
-## 📖 Overview
+<h2 id="-magic-glove-english">🇬🇧 English Version</h2>
+
+### 📖 Overview
 
 **Magic Glove** is a wearable gesture controller that transforms a cotton glove into a wireless BLE mouse and keyboard. Built on the Seeed Studio XIAO ESP32-S3 with an MPU-6050 IMU, it supports 3 switchable control modes — from gaming (WASD) to air-mouse gyroscope control — all through intuitive finger-touch gestures.
 
 > 🏆 **Winner of Best Automation & Productivity** at Rutgers IEEE 2026 Build_a_thon 24h competition
 
-## 🛠️ Tech Stack
+### 🛠️ Tech Stack
 
 | Layer | Technology | Details |
 |-------|-----------|---------|
-| **MCU** | Seeed Studio XIAO ESP32-S3 | ESP32-S3R8, Xtensa LX7 dual-core @ 240 MHz, 8 MB PSRAM |
-| **IMU** | MPU-6050 | Raw I2C driver (no library) · ±1000°/s gyroscope · 44 Hz DLPF |
-| **BLE Stack** | NimBLE-Arduino + ESP32-NimBLE-Combo | Composite HID: Keyboard + Mouse over BLE 5.0 |
+| **MCU** | [Seeed Studio XIAO ESP32-S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) | ESP32-S3R8, Xtensa LX7 dual-core @ 240 MHz, 8 MB PSRAM |
+| **IMU** | [MPU-6050](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/) | Raw I2C driver (no library) · ±1000°/s gyroscope · 44 Hz DLPF |
+| **BLE Stack** | [NimBLE-Arduino](https://github.com/h2zero/NimBLE-Arduino) | Composite HID: Keyboard + Mouse over BLE 5.0 |
 | **Touch Sensing** | ESP32-S3 Capacitive Touch | 4-channel with adaptive baseline calibration & debounce |
-| **Audio Feedback** | MH-FMD Passive Buzzer | Pattern-based alerts: boot, mode switch, connection events |
-| **Framework** | Arduino (PlatformIO) | Espressif32 platform · USB CDC debug logging |
-| **Motion Algorithm** | Custom Quadratic Acceleration | Non-linear cursor mapping: `speed = sign(ω) × ω² × factor` |
+| **Audio Feedback** | Passive Buzzer | Pattern-based alerts: boot, mode switch, connection events |
+| **Framework** | [PlatformIO](https://platformio.org/) | Espressif32 platform · USB CDC debug logging |
 
-## 🏗️ Architecture
+### 📐 Hardware Pinout (XIAO ESP32-S3)
+
+![XIAO ESP32-S3 Pinout](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiao-esp32s3-pinout.png)
+
+### 🏗️ Architecture
 
 ```
 src/
@@ -58,11 +71,11 @@ src/
 └── USBHIDManager.h/.cpp# USB HID fallback driver (development/debug)
 ```
 
-## 🎮 Control Modes
+### 🎮 Control Modes
 
 Switch between modes with the **D10 button**. The buzzer beeps to confirm (1/2/3 beeps).
 
-### Mode 0 — WASD + Space (Gaming)
+#### Mode 0 — WASD + Space (Gaming)
 
 | Gesture | Action |
 |---------|--------|
@@ -74,7 +87,7 @@ Switch between modes with the **D10 button**. The buzzer beeps to confirm (1/2/3
 | Index + Middle | Left Click |
 | Ring + Pinky | Right Click |
 
-### Mode 1 — KL (Rhythm Games)
+#### Mode 1 — KL (Rhythm Games)
 
 | Gesture | Action |
 |---------|--------|
@@ -84,7 +97,7 @@ Switch between modes with the **D10 button**. The buzzer beeps to confirm (1/2/3
 | Index + Middle | Left Click |
 | Ring + Pinky | Right Click |
 
-### Mode 2 — Gyro Air-Mouse
+#### Mode 2 — Gyro Air-Mouse
 
 | Gesture | Action |
 |---------|--------|
@@ -94,23 +107,19 @@ Switch between modes with the **D10 button**. The buzzer beeps to confirm (1/2/3
 | Index + Middle | Left Click |
 | Ring + Pinky | Right Click |
 
-## 🔧 Hardware BOM
+### 🔧 Hardware BOM
 
 | Qty | Component | Purpose |
 |-----|-----------|---------|
-| 1 | Seeed Studio XIAO ESP32-S3 | Main controller |
+| 1 | [Seeed Studio XIAO ESP32-S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) | Main controller |
 | 1 | MPU-6050 module (GY-521) | 6-axis IMU for air-mouse |
 | 1 | MH-FMD passive buzzer | Audio feedback |
 | 1 | Tactile push button | Mode switching |
-| 4 | Copper tape pads | Finger touch sensors (Index/Middle/Ring/Pinky) |
-| 2 | Copper tape pads | Ground plane (Thumb + Palm) |
+| 4 | Copper tape pads | Finger touch sensors |
 | 1 | Cotton glove | Wearable base |
 | 1 | 3.7V Li-ion battery | Wireless power |
-| — | Flexible silicone wire | Connections |
 
-## ⚡ Wiring
-
-See [docs/wiring.md](docs/wiring.md) for the full pin connection table.
+### ⚡ Wiring
 
 | XIAO Pin | GPIO | Function |
 |----------|------|----------|
@@ -120,53 +129,72 @@ See [docs/wiring.md](docs/wiring.md) for the full pin connection table.
 | D8 | GPIO 7 | Buzzer output |
 | D10 | GPIO 9 | Mode switch button |
 
-## 🚀 Quick Start
+---
 
-### PlatformIO (Recommended)
+<h2 id="-magic-glove-中文版">🇨🇳 中文版</h2>
+
+### 📖 概述
+
+**Magic Glove** 是一款可穿戴手势控制器，将普通棉手套改造为无线 BLE 鼠标与键盘。基于 Seeed Studio XIAO ESP32-S3 和 MPU-6050 惯性测量单元，支持 3 种可切换控制模式——从游戏（WASD 方向键）到空中鼠标陀螺仪控制——全部通过直觉式手指触摸手势完成。
+
+> 🏆 **荣获 Rutgers IEEE 2026 建造马拉松 最佳自动化与生产力奖（Best Automation & Productivity）**
+
+### 🛠️ 技术栈
+
+| 层级 | 技术 | 详情 |
+|------|------|------|
+| **主控芯片** | [Seeed Studio XIAO ESP32-S3](https://www.seeedstudio.com/XIAO-ESP32S3-p-5627.html) | ESP32-S3R8, Xtensa LX7 双核 @ 240 MHz, 8 MB PSRAM |
+| **惯性传感器** | [MPU-6050](https://invensense.tdk.com/products/motion-tracking/6-axis/mpu-6050/) | 原生 I2C 驱动（无第三方库） |
+| **蓝牙协议栈** | [NimBLE-Arduino](https://github.com/h2zero/NimBLE-Arduino) | 复合 HID 设备：键盘 + 鼠标，BLE 5.0 |
+| **开发框架** | [PlatformIO](https://platformio.org/) | Espressif32 平台 · USB CDC 调试日志 |
+
+### 📐 硬件引脚图 (XIAO ESP32-S3)
+
+![XIAO ESP32-S3 Pinout](https://files.seeedstudio.com/wiki/SeeedStudio-XIAO-ESP32S3/img/xiao-esp32s3-pinout.png)
+
+### 🎮 控制模式
+
+通过 **D10 按钮** 切换模式，蜂鸣器响声确认（1/2/3 声）。
+
+#### 模式 0 — WASD + 空格（游戏）
+
+| 手势 | 动作 |
+|------|------|
+| 食指触摸 | `W`（前进） |
+| 中指触摸 | `S`（后退） |
+| 无名指触摸 | `A`（左移） |
+| 小指触摸 | `D`（右移） |
+| 四指同时触摸 | `空格`（跳跃） |
+
+#### 模式 2 — 陀螺仪空中鼠标
+
+| 手势 | 动作 |
+|------|------|
+| 倾斜手掌 | 移动光标（二次加速度算法） |
+| 食指触摸 | 鼠标左键 |
+| 中指触摸 | 鼠标右键 |
+
+### 🚀 快速开始
 
 ```bash
 git clone https://github.com/LucasYanzy/Magic-Glove.git
 cd Magic-Glove
-# Open in VS Code with PlatformIO extension, then:
-# Build → Upload → Monitor
+# 在 VS Code 中打开（需安装 PlatformIO 扩展）
 ```
 
-### Arduino IDE
-
-1. Install [ESP32 Arduino Core](https://docs.espressif.com/projects/arduino-esp32/en/latest/installing.html)
-2. Install libraries via Library Manager:
-   - `NimBLE-Arduino` by h2zero
-   - `ESP32-NimBLE-Combo` by A-box1000
-3. Select board: **XIAO ESP32S3**
-4. Upload
-
-## 🎯 Calibration
-
-1. Power on the device
-2. LED blinks rapidly — **do NOT touch any finger pads**
-3. After ~1 second, LED stays solid → calibration complete
-4. When switching to Gyro mode, keep hand still for auto gyro calibration
+---
 
 ## 📂 Project Structure
 
 ```
 Magic-Glove/
 ├── src/                    # Firmware source code
-│   ├── main.cpp            # Entry point + MPU-6050 driver
-│   ├── Config.h            # Hardware configuration
-│   ├── BLEManager.h/.cpp   # BLE HID manager
-│   ├── TouchSensor.h/.cpp  # Capacitive touch engine
-│   ├── ActionMapper.h/.cpp # Gesture mapping
-│   ├── Buzzer.h/.cpp       # Audio feedback
-│   └── USBHIDManager.h/.cpp# USB HID (debug)
-├── docs/
-│   └── wiring.md           # Wiring guide
+├── docs/                   # Documentation
 ├── platformio.ini          # Build configuration
-├── library.json            # Project metadata
-├── LICENSE                 # MIT License
 └── README.md               # This file
 ```
 
 ## 📄 License
 
 MIT License — see [LICENSE](LICENSE) for details.
+
